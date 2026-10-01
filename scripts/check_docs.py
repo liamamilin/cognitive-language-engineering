@@ -11,7 +11,7 @@ import re
 import sys
 import markdown
 import yaml
-from update_registry import parse_registry
+from update_registry import parse_registry, parse_model_cards
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / 'docs'
@@ -78,7 +78,7 @@ if len(ids) != len(snapshot):
 model_counts = Counter()
 for model in ['M1', 'M2', 'M3', 'M4']:
     text = (DOCS / f'models/{model}.md').read_text()
-    headings = dict(re.findall(r'^## ([RCIA]-[PC]\d+)\. (.+)$', text, re.M))
+    headings = {card['id']: card['name'] for card in parse_model_cards(text)}
     registered = {r['id']: r for r in snapshot if r['model'] == model}
     if set(headings) != set(registered):
         errors.append(f'{model}: snapshot/source ID mismatch')

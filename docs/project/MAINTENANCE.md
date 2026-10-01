@@ -36,3 +36,9 @@ ID 不重新分配给无关含义；撤销时保留历史和替代关系。Speci
 派生快照在正文修改后执行 `python scripts/update_registry.py`；检查执行 `python scripts/update_registry.py --check` 和 `python scripts/check_docs.py`。文档需要先定义关系类型，再由脚本检查引用，不通过脚本把描述关联误判为执行依赖。
 
 结束记录与目标检查同步修订。新的真实失败进入失效分析和边界例，学习效果需要独立记录。已有状态仍有效时复用，版本或环境变化时重新核对关键前提。
+
+## v0.6工作版维护
+
+完整v0.6单独打磨，原v0.5与结构核心v0.2冻结内容保留。接口卡为学习连接的权威正文；改方法时同步算子、模式、完整索引、相关案例与训练。P7约束新增模型接口与方法，不以目录覆盖为理由机械新增组件。
+
+每轮执行check_mainline.py、check_docs.py、update_registry.py --check、严格构建及check_site.py。结构核心v0.2的原全集审计使用archive/full-v0.5-frozen的算子与协议，避免将v0.6新增内容硬塞入旧冻结选择。

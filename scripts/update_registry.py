@@ -11,13 +11,27 @@ def field(body, label):
     match = re.search(r'\*\*' + re.escape(label) + r'：\*\* ([^\n]+)', body)
     return re.findall(r'\[(' + ID + r')\]', match[1]) if match else []
 
+def parse_model_cards(text):
+    """Read legacy headings and reader-facing bilingual headings by stable ID."""
+    pattern = r'^#{2,3} (?:(?P<old_id>[RCIA]-[PC]\d+)\. (?P<old_name>[^\n]+)|(?P<zh>[^\n]+)（(?P<en>[^\n]+)） · (?P<new_id>[RCIA]-[PC]\d+))\n'
+    cards = []
+    for match in re.finditer(pattern, text, re.M):
+        next_heading = re.search(r'^#{2,3} ', text[match.end():], re.M)
+        end = match.end() + next_heading.start() if next_heading else len(text)
+        cards.append({
+            'id': match['old_id'] or match['new_id'],
+            'name': match['old_name'] or match['en'],
+            'display_name': match['zh'] or match['old_name'],
+            'body': text[match.end():end],
+        })
+    return cards
+
 def parse_registry():
     records = []
     for model in ['M1', 'M2', 'M3', 'M4']:
         text = (ROOT / f'docs/models/{model}.md').read_text()
-        parts = re.split(r'^## ([RCIA]-[PC]\d+)\. ([^\n]+)\n', text, flags=re.M)[1:]
-        for i in range(0, len(parts), 3):
-            ident, name, body = parts[i:i+3]
+        for card in parse_model_cards(text):
+            ident, name, body = card['id'], card['name'], card['body']
             specialization = field(body, '类型')
             records.append({
                 'id': ident, 'model': model, 'name': name,

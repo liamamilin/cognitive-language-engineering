@@ -73,7 +73,7 @@ def export(destination):
         md_sections.append(f'<a id="{prefix}"></a>\n\n' + '\n'.join(lines))
 
     md_toc = '\n'.join(f'{i}. [{label}](#{prefixes[p]})' for i, (label, p) in enumerate(entries, 1))
-    manuscript = f'# 认知语言工程｜完整体系 {version}\n\n{date} · 正式工程基线\n\n本稿由项目正文生成，包含理论架构、工程组件、使用案例、评估、来源和维护说明。修改以项目 docs 为准。\n\n## 目录\n\n' + md_toc + '\n\n---\n\n' + '\n\n---\n\n'.join(md_sections) + '\n'
+    manuscript = f'# 认知语言工程｜完整体系 {version}\n\n{date} · 完整体系工作版，尚未冻结\n\n本稿由项目正文生成，包含理论架构、工程组件、使用案例、评估、来源和维护说明。修改以项目 docs 为准。\n\n## 目录\n\n' + md_toc + '\n\n---\n\n' + '\n\n---\n\n'.join(md_sections) + '\n'
     md_path = destination / f'CLE_{version}_完整体系.md'
     md_path.write_text(manuscript)
     toc = ''.join(f'<li><a href="#{prefixes[p]}"><span>{i:02}</span>{escape(label)}</a></li>' for i, (label, p) in enumerate(entries, 1))
@@ -89,7 +89,7 @@ main{margin-left:270px;padding:48px 44px;max-width:1350px}header{padding:24px 0 
 @media(prefers-color-scheme:dark){:root{--bg:#142028;--paper:#192730;--ink:#e1e8eb;--muted:#adbdc5;--line:#344751;--accent:#76c8cb;--soft:#21363f}}
 @media(max-width:900px){aside{position:static;width:auto;max-height:310px;border-right:0;border-bottom:1px solid var(--line)}aside ol{columns:2}aside a{break-inside:avoid}main{margin:0;padding:28px 20px}header h1{font-size:30px}h1{font-size:24px}table{min-width:560px}}
 @media print{aside{display:none}main{margin:0;padding:0;max-width:none}body{background:white;color:black;font-size:11pt}section{break-before:page}h1,h2,h3{break-after:avoid}a{color:inherit}.table-wrap{overflow:visible}table{font-size:9pt}header{break-after:page}}
-</style></head><body><aside><strong>认知语言工程</strong><p>VERSION · 完整体系 · CHAPTER_COUNT章<br>目录可点击；全文可搜索或打印。</p><ol>TOC</ol></aside><main><header><div class="eyebrow">COGNITIVE LANGUAGE ENGINEERING</div><h1>让语言主动服务于人的目的</h1><p>完整体系 VERSION · DATE<br>从架构与状态接口，到语言操作、任务协议、实际结果和反馈。正式工程基线，可继续修订。</p></header>CONTENT<footer>此阅读副本由 Markdown 正文生成。工程完成与实证效果、用户验收和公开部署分别记录。© 文献版权归原作者；本书仅保留来源信息与必要转述。</footer></main></body></html>'''
+</style></head><body><aside><strong>认知语言工程</strong><p>VERSION · 完整体系 · CHAPTER_COUNT章<br>目录可点击；全文可搜索或打印。</p><ol>TOC</ol></aside><main><header><div class="eyebrow">COGNITIVE LANGUAGE ENGINEERING</div><h1>让语言主动服务于人的目的</h1><p>完整体系 VERSION · DATE<br>从架构与状态接口，到语言操作、任务协议、实际结果和反馈。完整体系工作版，尚未冻结，可继续修订。</p></header>CONTENT<footer>此阅读副本由 Markdown 正文生成。工程完成与实证效果、用户验收和公开部署分别记录。© 文献版权归原作者；本书仅保留来源信息与必要转述。</footer></main></body></html>'''
     html_path = destination / f'CLE_{version}_完整体系.html'
     html_path.write_text(template.replace('VERSION', version).replace('DATE', date).replace('CHAPTER_COUNT', str(len(entries))).replace('TOC', toc).replace('CONTENT', '\n'.join(html_sections)))
     return md_path, html_path

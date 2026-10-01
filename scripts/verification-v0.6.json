@@ -1,0 +1,44 @@
+[
+  {
+    "command": "python scripts/check_mainline.py",
+    "exit_code": 0,
+    "output": "{\n  \"interfaces\": 81,\n  \"operators\": 37,\n  \"principal_patterns\": 37,\n  \"all_interfaces_have_methods_examples_checks\": true,\n  \"baseline_definitions_and_archives_preserved\": true,\n  \"errors\": []\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": "python scripts/check_docs.py",
+    "exit_code": 0,
+    "output": "{\n  \"pages\": 48,\n  \"local_links\": 1759,\n  \"models\": {\n    \"M1\": 8,\n    \"M2\": 35,\n    \"M3\": 9,\n    \"M4\": 29\n  },\n  \"registry_interfaces\": 81,\n  \"snapshot_matches_source\": true,\n  \"operators\": 37,\n  \"protocols\": 13,\n  \"patterns\": 39,\n  \"mechanisms\": 12,\n  \"bridges\": 8,\n  \"outcomes\": 3,\n  \"sources\": 12,\n  \"errors\": []\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": "python scripts/check_essentials.py",
+    "exit_code": 0,
+    "output": "{\n  \"model_candidates\": 81,\n  \"primary_interfaces\": 23,\n  \"support_interfaces\": 8,\n  \"retained_interfaces\": 31,\n  \"retained_by_model\": {\n    \"M2\": 17,\n    \"M1\": 4,\n    \"M4\": 6,\n    \"M3\": 4\n  },\n  \"mechanism_candidates\": 12,\n  \"core_mechanisms\": 7,\n  \"operator_candidates\": 34,\n  \"core_operators_and_principal_patterns\": 15,\n  \"protocol_candidates\": 13,\n  \"fully_retained_protocols\": [\n    \"PR05\"\n  ],\n  \"errors\": []\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": "python scripts/update_registry.py --check",
+    "exit_code": 0,
+    "output": "Registry matches source: 81 interfaces, all fields.\n",
+    "stderr": ""
+  },
+  {
+    "command": "python -m mkdocs build --strict",
+    "exit_code": 0,
+    "output": "",
+    "stderr": "\n\u001b[31m │  ⚠  Warning from the Material for MkDocs team\u001b[0m\n\u001b[31m │\u001b[0m\n\u001b[31m │\u001b[0m  MkDocs 2.0, the underlying framework of Material for MkDocs,\n\u001b[31m │\u001b[0m  will introduce backward-incompatible changes, including:\n\u001b[31m │\u001b[0m\n\u001b[31m │  × \u001b[0mAll plugins will stop working – the plugin system has been removed\n\u001b[31m │  × \u001b[0mAll theme overrides will break – the theming system has been rewritten\n\u001b[31m │  × \u001b[0mNo migration path exists – existing projects cannot be upgraded\n\u001b[31m │  × \u001b[0mClosed contribution model – community members can't report bugs\n\u001b[31m │  × \u001b[0mCurrently unlicensed – unsuitable for production use\n\u001b[31m │\u001b[0m\n\u001b[31m │\u001b[0m  Our full analysis:\n\u001b[31m │\u001b[0m\n\u001b[31m │\u001b[0m  \u001b[4mhttps://squidfunk.github.io/mkdocs-material/blog/2026/02/18/mkdocs-2.0/\u001b[0m\n\u001b[0m\nINFO    -  Cleaning site directory\nINFO    -  Building documentation to directory: /workspace/scratch/938b0e6782c1/cognitive-language-engineering-v0.6/site\nINFO    -  Documentation built in 0.87 seconds\n"
+  },
+  {
+    "command": "python scripts/check_site.py",
+    "exit_code": 0,
+    "output": "{\n  \"html_pages\": 49,\n  \"local_urls_checked\": 5740,\n  \"errors\": []\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": "python scripts/export_book.py --output-dir reading",
+    "exit_code": 0,
+    "output": "reading/CLE_v0.6_完整体系.md\nreading/CLE_v0.6_完整体系.html\n",
+    "stderr": ""
+  }
+]

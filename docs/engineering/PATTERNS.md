@@ -2,46 +2,51 @@
 
 Pattern 保存可实例化的语言形式及适用条件；实际 utterance 还绑定主体、媒介、前文、状态和关系。Pattern 与 Operator / Protocol 是多对多，句子形式不能唯一决定功能。
 
-为避免两套手工编辑的正文，LP01—LP34 的主句与变体直接维护在算子卡片；本页提供用途映射与组合模式。
+为避免两套手工编辑的正文，LP01—LP34及LP37—LP39 的主句与变体直接维护在算子卡片；本页提供用途映射与组合模式。
+
+[学习连接索引](../learning/INTERFACE_PATHS.md)可从接口找到方法与模式；以下模式号是稳定ID，新算子的主模式号不必与算子号相同。LP35/LP36沿用原组合模式。
 
 ## 模式索引
 
 | 模式 | 正文来源 | 主要适用条件 |
 | --- | --- | --- |
-| LP01 | [OP01](OPERATORS.md#op01) | 能辨认 X 及相关结果 Y |
-| LP02 | [OP02](OPERATORS.md#op02) | 原目的与当前手段能被区别 |
-| LP03 | [OP03](OPERATORS.md#op03) | 原命题含义明确 |
-| LP04 | [OP04](OPERATORS.md#op04) | 知道暂时解除哪项约束 |
-| LP05 | [OP05](OPERATORS.md#op05) | 有基本事件记录与不确定性 |
-| LP06 | [OP06](OPERATORS.md#op06) | 两个对象或状态可进入对照 |
-| LP07 | [OP07](OPERATORS.md#op07) | 至少两个可指涉对象 |
-| LP08 | [OP08](OPERATORS.md#op08) | 主体正在作比较判断 |
-| LP09 | [OP09](OPERATORS.md#op09) | 对象模糊且需要具体判断 |
-| LP10 | [OP10](OPERATORS.md#op10) | 范围不清或搜索成本过大 |
-| LP11 | [OP11](OPERATORS.md#op11) | 单一方案、解释或未来方向不足 |
-| LP12 | [OP12](OPERATORS.md#op12) | 已有一个可明确的判断 |
-| LP13 | [OP13](OPERATORS.md#op13) | 主张与材料可定位 |
-| LP14 | [OP14](OPERATORS.md#op14) | 命题范围明确 |
-| LP15 | [OP15](OPERATORS.md#op15) | 主体、候选与情境明确 |
-| LP16 | [OP16](OPERATORS.md#op16) | 已有或正在形成偏好方向 |
-| LP17 | [OP17](OPERATORS.md#op17) | 主体有一个期望状态 |
-| LP18 | [OP18](OPERATORS.md#op18) | 评价对象与用途可澄清 |
-| LP19 | [OP19](OPERATORS.md#op19) | 有候选、标准和至少部分材料 |
-| LP20 | [OP20](OPERATORS.md#op20) | 需要当前决策，已有足够或明示不足信息 |
-| LP21 | [OP21](OPERATORS.md#op21) | 目标或选择已明确 |
-| LP22 | [OP22](OPERATORS.md#op22) | 有一个判断或操作过程 |
-| LP23 | [OP23](OPERATORS.md#op23) | 有需要共享的具体内容 |
-| LP24 | [OP24](OPERATORS.md#op24) | 双方解释或工作范围不同 |
-| LP25 | [OP25](OPERATORS.md#op25) | 存在可表达的不一致 |
-| LP26 | [OP26](OPERATORS.md#op26) | 对象、渠道和所求行为明确 |
-| LP27 | [OP27](OPERATORS.md#op27) | 有主体、受益方与适用规则 |
-| LP28 | [OP28](OPERATORS.md#op28) | 已有任务方向和相关角色 |
-| LP29 | [OP29](OPERATORS.md#op29) | 需要行动安排，规则来源可查 |
-| LP30 | [OP30](OPERATORS.md#op30) | 有旧有效安排与新情况 |
-| LP31 | [OP31](OPERATORS.md#op31) | 存在需要重复处理的情境及有权角色 |
-| LP32 | [OP32](OPERATORS.md#op32) | 主体已采纳目标且能执行动作 |
-| LP33 | [OP33](OPERATORS.md#op33) | 有可追溯材料或待展开标签 |
-| LP34 | [OP34](OPERATORS.md#op34) | 有实例与可比较结构 |
+| <a id="lp01"></a>LP01 | [OP01](OPERATORS.md#op01) | 能辨认 X 及相关结果 Y |
+| <a id="lp02"></a>LP02 | [OP02](OPERATORS.md#op02) | 原目的与当前手段能被区别 |
+| <a id="lp03"></a>LP03 | [OP03](OPERATORS.md#op03) | 原命题含义明确 |
+| <a id="lp04"></a>LP04 | [OP04](OPERATORS.md#op04) | 知道暂时解除哪项约束 |
+| <a id="lp05"></a>LP05 | [OP05](OPERATORS.md#op05) | 有基本事件记录与不确定性 |
+| <a id="lp06"></a>LP06 | [OP06](OPERATORS.md#op06) | 两个对象或状态可进入对照 |
+| <a id="lp07"></a>LP07 | [OP07](OPERATORS.md#op07) | 至少两个可指涉对象 |
+| <a id="lp08"></a>LP08 | [OP08](OPERATORS.md#op08) | 主体正在作比较判断 |
+| <a id="lp09"></a>LP09 | [OP09](OPERATORS.md#op09) | 对象含义不明、需具体判断或显化当前内容 |
+| <a id="lp10"></a>LP10 | [OP10](OPERATORS.md#op10) | 范围不清或搜索成本过大 |
+| <a id="lp11"></a>LP11 | [OP11](OPERATORS.md#op11) | 候选缺少或单一 |
+| <a id="lp12"></a>LP12 | [OP12](OPERATORS.md#op12) | 已有一个可明确的判断 |
+| <a id="lp13"></a>LP13 | [OP13](OPERATORS.md#op13) | 主张与材料可定位 |
+| <a id="lp14"></a>LP14 | [OP14](OPERATORS.md#op14) | 命题范围明确 |
+| <a id="lp15"></a>LP15 | [OP15](OPERATORS.md#op15) | 主体、候选与情境明确 |
+| <a id="lp16"></a>LP16 | [OP16](OPERATORS.md#op16) | 已有或正在形成偏好方向 |
+| <a id="lp17"></a>LP17 | [OP17](OPERATORS.md#op17) | 主体有一个期望状态 |
+| <a id="lp18"></a>LP18 | [OP18](OPERATORS.md#op18) | 评价对象与用途可澄清 |
+| <a id="lp19"></a>LP19 | [OP19](OPERATORS.md#op19) | 有候选、标准和至少部分材料 |
+| <a id="lp20"></a>LP20 | [OP20](OPERATORS.md#op20) | 需要当前决策，已有足够或明示不足信息 |
+| <a id="lp21"></a>LP21 | [OP21](OPERATORS.md#op21) | 目标或选择已明确 |
+| <a id="lp22"></a>LP22 | [OP22](OPERATORS.md#op22) | 有一个判断或操作过程 |
+| <a id="lp23"></a>LP23 | [OP23](OPERATORS.md#op23) | 有需要共享的具体内容 |
+| <a id="lp24"></a>LP24 | [OP24](OPERATORS.md#op24) | 含义、范围或模型需共同处理 |
+| <a id="lp25"></a>LP25 | [OP25](OPERATORS.md#op25) | 存在可表达的不一致 |
+| <a id="lp26"></a>LP26 | [OP26](OPERATORS.md#op26) | 对象、渠道和所求行为明确 |
+| <a id="lp27"></a>LP27 | [OP27](OPERATORS.md#op27) | 有主体、受益方与适用规则 |
+| <a id="lp28"></a>LP28 | [OP28](OPERATORS.md#op28) | 已有任务方向和相关角色 |
+| <a id="lp29"></a>LP29 | [OP29](OPERATORS.md#op29) | 主张可先记录；有效认可须查来源 |
+| <a id="lp30"></a>LP30 | [OP30](OPERATORS.md#op30) | 有旧有效安排与新情况 |
+| <a id="lp31"></a>LP31 | [OP31](OPERATORS.md#op31) | 存在需要重复处理的情境及有权角色 |
+| <a id="lp32"></a>LP32 | [OP32](OPERATORS.md#op32) | 主体已采纳目标且能执行动作 |
+| <a id="lp33"></a>LP33 | [OP33](OPERATORS.md#op33) | 有可追溯材料或待展开标签 |
+| <a id="lp34"></a>LP34 | [OP34](OPERATORS.md#op34) | 有实例、结构或待组织要素 |
+| [LP37](#lp37) | [OP35](OPERATORS.md#op35) | 参照算子前提；按目标分别检查 |
+| [LP38](#lp38) | [OP36](OPERATORS.md#op36) | 参照算子前提；按目标分别检查 |
+| [LP39](#lp39) | [OP37](OPERATORS.md#op37) | 参照算子前提；按目标分别检查 |
 
 <a id="lp35"></a>
 ## LP35. Desired-Change Micro-Protocol｜“你希望什么变得不同？”
@@ -76,3 +81,24 @@ Pattern 保存可实例化的语言形式及适用条件；实际 utterance 还�
 如果规则已经有效，只缺结果材料，这句话未必适用；应按规则取得材料。语言模式的多对多关系通过这种语境差异体现，而非给每个句子增加更多标签。
 
 实例化前只检查影响本次用途的槽位：谁、哪个对象、哪项范围、什么材料、请求哪种响应。信息不明时澄清或保留未知，不为模板完整而编造。句子的礼貌、长度或肯定程度不能代替目标达成检查。
+
+<a id="lp37"></a>
+## LP37. Focus / Feature Selection｜聚焦与特征选择
+
+主句与语境变体维护在[OP35](OPERATORS.md#op35)。模式：“为了当前用途，先看什么？哪些特征会改变判断，哪些暂时略去？”
+
+该形式用于尝试相应操作；是否产生接口所需结果，须按算子和接口检查，不凭句式判定。
+
+<a id="lp38"></a>
+## LP38. Linguistic Encoding｜组织语言表达
+
+主句与语境变体维护在[OP36](OPERATORS.md#op36)。模式：“我想表达的是X，在条件C下成立；依据是E，U仍未知。这样是否保留了原意？”
+
+该形式用于尝试相应操作；是否产生接口所需结果，须按算子和接口检查，不凭句式判定。
+
+<a id="lp39"></a>
+## LP39. Result Verification / Closure｜核验结果与关闭
+
+主句与语境变体维护在[OP37](OPERATORS.md#op37)。模式：“按已约定规则，这份真实结果满足什么、未满足什么、哪些无法核验？由谁依据什么关闭？”
+
+该形式用于尝试相应操作；是否产生接口所需结果，须按算子和接口检查，不凭句式判定。

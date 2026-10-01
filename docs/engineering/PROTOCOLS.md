@@ -1,5 +1,7 @@
 # Protocol Library｜完整任务流程
 
+本页组织已学习算子的完整任务调用，作为五层学习主线的应用支撑。已有状态和单一方法足够时复用或停止。
+
 版本 v0.5。协议是带条件的操作组织，包含入口、步骤、分支／回退、停止和产出。当前效果 E0；示例走通只是工程一致性检查。
 
 ## 总调用方式
@@ -360,7 +362,7 @@
 
 **入口与目标：** 已执行／报告结果 → 核验与有效修订。
 
-**使用组件：** [OP13](OPERATORS.md#op13)、[OP18](OPERATORS.md#op18)、[OP19](OPERATORS.md#op19)、[OP22](OPERATORS.md#op22)、[OP30](OPERATORS.md#op30)。
+**使用组件：** [OP37](OPERATORS.md#op37)、 [OP13](OPERATORS.md#op13)、[OP18](OPERATORS.md#op18)、[OP19](OPERATORS.md#op19)、[OP22](OPERATORS.md#op22)、[OP30](OPERATORS.md#op30)。
 
 **步骤：**
 

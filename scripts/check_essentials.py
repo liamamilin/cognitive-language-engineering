@@ -54,7 +54,7 @@ if not {'A-P14', 'A-P16'} <= retained:
     errors.append('Basic task completion must retain deliverable and acceptance binding support')
 
 def check_family(rows, file, prefix, valid_tiers):
-    source = (ROOT / file).read_text()
+    source = ((ROOT / 'archive/full-v0.5-frozen' / file) if file.startswith('docs/engineering/') else (ROOT / file)).read_text()
     known = set(re.findall(r'^## (' + prefix + r'\d+)\.', source, re.M))
     if set(rows) != known:
         errors.append(f'{prefix} audit must cover the full original family')
