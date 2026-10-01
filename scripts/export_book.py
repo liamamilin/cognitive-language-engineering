@@ -34,6 +34,9 @@ def export(destination):
     version = re.search(r'Core Spec (v[\d.]+)', core).group(1)
     date = re.search(r'日期：(\d{4}-\d{2}-\d{2})', core).group(1)
     entries = list(nav_entries(yaml.safe_load((ROOT / 'mkdocs.yml').read_text())['nav']))
+    credit_match = re.search(r'^\*\*作者：\*\* .+$', (DOCS / 'index.md').read_text(), re.MULTILINE)
+    credit = credit_match.group(0) if credit_match else ''
+    credit_html = markdown.markdown(credit)
     prefixes = {p: f'chapter-{i:02}' for i, (_, p) in enumerate(entries, 1)}
     def link(href, current):
         u = urlsplit(unescape(href))
@@ -73,24 +76,15 @@ def export(destination):
         md_sections.append(f'<a id="{prefix}"></a>\n\n' + '\n'.join(lines))
 
     md_toc = '\n'.join(f'{i}. [{label}](#{prefixes[p]})' for i, (label, p) in enumerate(entries, 1))
-    manuscript = f'# 认知语言工程｜完整体系 {version}\n\n{date} · 完整体系工作版，尚未冻结\n\n本稿由项目正文生成，包含理论架构、工程组件、使用案例、评估、来源和维护说明。修改以项目 docs 为准。\n\n## 目录\n\n' + md_toc + '\n\n---\n\n' + '\n\n---\n\n'.join(md_sections) + '\n'
+    manuscript = f'# 认知语言工程｜完整体系 {version}\n\n{credit}\n\n{date} · 完整体系工作版，尚未冻结\n\n本稿由项目正文生成，包含理论架构、工程组件、使用案例、评估、来源和维护说明。修改以项目 docs 为准。\n\n## 目录\n\n' + md_toc + '\n\n---\n\n' + '\n\n---\n\n'.join(md_sections) + '\n'
     md_path = destination / f'CLE_{version}_完整体系.md'
     md_path.write_text(manuscript)
     toc = ''.join(f'<li><a href="#{prefixes[p]}"><span>{i:02}</span>{escape(label)}</a></li>' for i, (label, p) in enumerate(entries, 1))
-    template = '''<!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>认知语言工程 · 完整体系 VERSION</title>
-<style>
-:root {color-scheme:light dark;--bg:#faf9f6;--paper:#fff;--ink:#202c35;--muted:#5e6b76;--line:#dce3e6;--accent:#176b72;--soft:#eff5f4}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.85 system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
-a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}aside{position:fixed;inset:0 auto 0 0;width:270px;overflow:auto;border-right:1px solid var(--line);padding:28px 20px;background:var(--paper)}
-aside strong{font-size:19px}aside p{font-size:13px;color:var(--muted);margin:6px 0 20px}aside ol{list-style:none;padding:0;margin:0}aside li{margin:0 0 6px}aside a{display:flex;gap:10px;color:var(--ink);font-size:13px;padding:3px 0}aside span{color:var(--muted);font-variant-numeric:tabular-nums}
-main{margin-left:270px;padding:48px 44px;max-width:1350px}header{padding:24px 0 42px;border-bottom:2px solid var(--accent);margin-bottom:30px}header .eyebrow{font-size:12px;letter-spacing:.13em;color:var(--accent)}header h1{font-size:38px;line-height:1.3;margin:12px 0}header p{max-width:720px;color:var(--muted)}section{padding:42px 0;border-bottom:1px solid var(--line);scroll-margin-top:20px}.chapter-number{font-size:12px;color:var(--accent);letter-spacing:.1em;margin-bottom:12px}h1{font-size:28px;line-height:1.4}h2{font-size:21px;line-height:1.5;margin:34px 0 16px}h3{font-size:18px;margin-top:28px}p{margin:14px 0}li{margin:5px 0}strong{font-weight:650}.table-wrap{overflow-x:auto;margin:22px 0}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.65}th,td{border:1px solid var(--line);padding:10px 12px;vertical-align:top}th{background:var(--soft);text-align:left}code{background:var(--soft);padding:2px 5px;border-radius:3px;font-size:.88em}pre{background:var(--soft);padding:18px;overflow:auto}pre code{padding:0}blockquote{border-left:3px solid var(--accent);padding-left:18px;color:var(--muted)}footer{font-size:13px;color:var(--muted);padding:30px 0}a[id]{scroll-margin-top:20px}
-@media(prefers-color-scheme:dark){:root{--bg:#142028;--paper:#192730;--ink:#e1e8eb;--muted:#adbdc5;--line:#344751;--accent:#76c8cb;--soft:#21363f}}
-@media(max-width:900px){aside{position:static;width:auto;max-height:310px;border-right:0;border-bottom:1px solid var(--line)}aside ol{columns:2}aside a{break-inside:avoid}main{margin:0;padding:28px 20px}header h1{font-size:30px}h1{font-size:24px}table{min-width:560px}}
-@media print{aside{display:none}main{margin:0;padding:0;max-width:none}body{background:white;color:black;font-size:11pt}section{break-before:page}h1,h2,h3{break-after:avoid}a{color:inherit}.table-wrap{overflow:visible}table{font-size:9pt}header{break-after:page}}
-</style></head><body><aside><strong>认知语言工程</strong><p>VERSION · 完整体系 · CHAPTER_COUNT章<br>目录可点击；全文可搜索或打印。</p><ol>TOC</ol></aside><main><header><div class="eyebrow">COGNITIVE LANGUAGE ENGINEERING</div><h1>让语言主动服务于人的目的</h1><p>完整体系 VERSION · DATE<br>从架构与状态接口，到语言操作、任务协议、实际结果和反馈。完整体系工作版，尚未冻结，可继续修订。</p></header>CONTENT<footer>此阅读副本由 Markdown 正文生成。工程完成与实证效果、用户验收和公开部署分别记录。© 文献版权归原作者；本书仅保留来源信息与必要转述。</footer></main></body></html>'''
+    template = (ROOT / 'overrides/reading.html').read_text()
+    template = template.replace('READER_CSS', (DOCS / 'assets/stylesheets/reader.css').read_text())
+    template = template.replace('READER_JS', (DOCS / 'assets/javascripts/reader.js').read_text())
     html_path = destination / f'CLE_{version}_完整体系.html'
+    template = template.replace('AUTHOR_CREDIT', credit_html)
     html_path.write_text(template.replace('VERSION', version).replace('DATE', date).replace('CHAPTER_COUNT', str(len(entries))).replace('TOC', toc).replace('CONTENT', '\n'.join(html_sections)))
     return md_path, html_path
 

@@ -14,6 +14,7 @@ theme:
   - navigation.sections
   - navigation.footer
   - navigation.top
+  - toc.follow
   - search.suggest
   - search.highlight
   - content.code.copy
@@ -33,6 +34,10 @@ theme:
 plugins:
 - search:
     lang: zh
+extra_css:
+- assets/stylesheets/reader.css
+extra_javascript:
+- assets/javascripts/reader.js
 markdown_extensions:
 - admonition
 - tables
