@@ -3,7 +3,7 @@
 机制解释变化可能怎样产生，帮助理解与诊断；它不替代算子的方法入口，也不构成五层学习主线的强制中间层。
 
 
-机制家族是用于组织解释的索引，不把一个家族当作单一已测得心理过程。模型中的映射均是工程候选；有文献支持的局部现象另列来源，不能把其等级直接赋给全部组件。
+机制是对变化怎样产生的过程说明；未取得相应依据时保留为候选解释。机制家族是相关过程解释的分组索引，不把一个家族当作单一已测得心理过程。模型中的映射均是工程候选；有文献支持的局部现象另列来源，不能把其等级直接赋给全部组件。
 
 <a id="me01"></a>
 ## ME01. Attention Direction / Search Allocation
@@ -18,7 +18,7 @@
 <a id="me03"></a>
 ## ME03. Encoding / Externalization / Retrieval
 
-分别组织表达、外部记录和重新调用材料。映射 R-P5/R-P6/R-P7、C-P2。外化可以改变任务的信息处理要求；[SRC07](sources/VERIFIED_SOURCES.md#src07)提供相关综述。本版不据此宣称写下来一定提高记忆或理解；编码、压缩和概念命名的具体映射仍 E0。
+分别组织表达、外化（将内容形成可查看的外部记录）和提取（重新调用有关材料）。映射 R-P5/R-P6/R-P7、C-P2。外化可以改变任务的信息处理要求；[SRC07](sources/VERIFIED_SOURCES.md#src07)提供相关综述。本版不据此宣称写下来一定提高记忆或理解；编码、压缩和概念命名的具体映射仍 E0。
 
 <a id="me04"></a>
 ## ME04. Metacognitive Monitoring / Confidence Representation
@@ -38,7 +38,7 @@
 <a id="me07"></a>
 ## ME07. Prospective Simulation
 
-组织未来事件或状态表征；episodic 与 semantic 表征需区分。映射 C-P16、C-C6/C-C13。[SRC04](sources/VERIFIED_SOURCES.md#src04)支持未来事件模拟在指定跨期选择任务中的效果，[SRC05](sources/VERIFIED_SOURCES.md#src05)提供概念基础。它们不验证所有期望状态构造，亦不证明理想画面自动促成行动。
+组织未来事件或状态表征；这里情景性（episodic）表征设想具体个人事件，一般知识性（semantic）表征描述未来的性质或关系，二者不混为同一种想象。这是辅助阅读区分，相关个人与非个人未来思考的研究用法可查[原研究摘要](https://pubmed.ncbi.nlm.nih.gov/27252632/)，不据此新增CLE效果主张。映射 C-P16、C-C6/C-C13。[SRC04](sources/VERIFIED_SOURCES.md#src04)支持未来事件模拟在指定跨期选择任务中的效果，[SRC05](sources/VERIFIED_SOURCES.md#src05)提供概念基础。它们不验证所有期望状态构造，亦不证明理想画面自动促成行动。
 
 <a id="me08"></a>
 ## ME08. Explanation / Evidence Appraisal / Model Testing
@@ -53,17 +53,17 @@
 <a id="me10"></a>
 ## ME10. Grounding / Interactional Repair
 
-共同提供和检查理解证据，按目的与媒介修复歧义。映射 I-P1、I-C1—I-C8、B-C2。[SRC01](sources/VERIFIED_SOURCES.md#src01)提供原理论文本依据。共享程度是对任务的充分程度，不是完美一致；CLE 的特定模式、停止条件与错误率仍需检验。
+共享确认（grounding）是共同提供和检查当前目的所需理解依据的过程；互动修复是根据反馈定位并修正误解或歧义。映射 I-P1、I-C1—I-C8、B-C2。[SRC01](sources/VERIFIED_SOURCES.md#src01)提供原理论文本依据。共享程度是对任务的充分程度，不是完美一致；CLE 的特定模式、停止条件与错误率仍需检验。
 
 <a id="me11"></a>
 ## ME11. Situated Interpretation / Pragmatic Inference
 
-根据语境、角色、前文和语言形式理解所指与行为功能。映射 I-C2/I-C3、A-P1、B-C2/B-C3/B-C7。本版作为理论相关过程家族登记；不宣称语言形式足以决定功能。[SRC01](sources/VERIFIED_SOURCES.md#src01)说明理解与互动的关系，但不承担全部语用推理理论。
+语用推理是根据语境、角色、前文和语言形式，判断表达指什么、在互动中要做什么。映射 I-C2/I-C3、A-P1、B-C2/B-C3/B-C7。本版作为理论相关过程家族登记；不宣称语言形式足以决定功能。[SRC01](sources/VERIFIED_SOURCES.md#src01)说明理解与互动的关系，但不承担全部语用推理理论。
 
 <a id="me12"></a>
 ## ME12. Constitutive Rules / Social-State Update
 
-根据有效规则，将请求、承担、认可、授权或关闭事件解释为社会状态更新。映射 M4 全部条目。这里首先是过程与制度规则的工程描述，效果 E0；不是把“承诺形成”再叫作同名机制就得到因果解释。需检查角色、来源、认可与真实执行条件。
+构成规则说明何种条件下某事件算作有效关系或状态，例如什么算任务已接受。根据有效规则，将请求、承担、认可、授权或关闭事件解释为社会状态更新。映射 M4 全部条目。这里首先是过程与制度规则的工程描述，效果 E0；不是把“承诺形成”再叫作同名机制就得到因果解释。需检查角色、来源、认可与真实执行条件。
 
 ## 映射检查
 

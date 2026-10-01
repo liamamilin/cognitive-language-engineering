@@ -16,6 +16,8 @@
 
 掌握之后，按[应用指南](START_HERE.md)从实际任务进入。需要解释原理时读[机制](MECHANISMS.md)；需要组织多个操作时读[协议](engineering/PROTOCOLS.md)；练习与检查见[能力训练](learning/TRAINING.md)。
 
+遇到术语不清楚时，按需查[术语表](GLOSSARY.md)；本轮补齐概念定义并在主线和模型就近解释，[审查记录](project/CONCEPT_AUDIT.md)供查看修改依据。
+
 ## 本版怎样打磨
 
 | 范围 | 本版内容 |

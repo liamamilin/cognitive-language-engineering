@@ -1,6 +1,6 @@
 # 文献核验与主张边界
 
-核验日期：2026-10-01。优先使用作者、机构、原始论文与 PubMed 页面。这里只报告实际检索深度；“书目存在”与“支持某结论”分别判断。链接可随来源网站变化。
+核验日期：2026-10-01。优先使用作者、机构、原始论文与 PubMed 页面。这里只报告实际检索深度；“书目存在”与“支持某结论”分别判断。链接可随来源网站变化。题录／元数据是题名、作者、年份和标识等记录，摘要是作者对研究的简述；这些与全文读取分开。DOI是文献标识，PMID是PubMed记录编号，不直接代表证据质量。
 
 <a id="src01"></a>
 
@@ -131,3 +131,9 @@ Gollwitzer & Sheeran (2006), Implementation intentions and goal achievement: A m
 ## 对整个 CLE 的支持程度
 
 这些文献支持局部概念、方法和效果主张。没有一篇来源直接验证本版四模型分类、34 算子组合、13 协议或整套训练的效果。对整体效果、迁移和成本的验证遵从[评估规范](../evaluation/EVALUATION.md)。
+
+## 本轮概念释义核对
+
+2026-10-01的概念审查重新核对了SRC08全文中的元认知偏差、敏感性与效率定义；此处只帮助解释测量词，不改变组件效果等级。另读[ECMWF概率指标页面](https://confluence.ecmwf.int/spaces/FUG/pages/673551875/Section%2B12.B%2BStatistical%2BConcepts%2B-%2BProbabilistic%2BData)的Brier分数说明及[Met Office可靠性图页面](https://www.metoffice.gov.uk/research/climate/seasonal-to-decadal/gpc-outlooks/user-guide/interpret-reliability)正文，核对专业测量词的简短释义。ME07中个人情景与一般知识性未来表征的区分另核对了[原研究的PubMed摘要](https://pubmed.ncbi.nlm.nih.gov/27252632/)；未读该研究全文，不用于声明CLE干预有效。
+
+其他原来源的读取深度保持原记录，不把本轮概念解释记为重新读取全部文献或验证了整套体系。

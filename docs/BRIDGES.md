@@ -1,6 +1,6 @@
 # Bridge Registry｜跨模型连接
 
-Bridge 表示一次跨观察域过程的分析接口。路径描述关键连接，不要求人类过程逐个串行，不将结果标签当成机制。
+Bridge是跨模型连接，表示一次跨观察域过程的分析接口。观察域指M1—M4采用的不同分析方面。路径描述关键连接，不要求人类过程逐个串行，不将结果标签当成机制。
 
 <a id="b-c1"></a>
 ## B-C1. Language-Mediated Cognitive Change
@@ -20,7 +20,7 @@ M2 意图 → M1 表达 → M3 请求所需的理解 → M4 A-P1 请求成立。
 <a id="b-c4"></a>
 ## B-C4. Understanding-to-Social Adoption
 
-M3 已有请求／安排理解 → M4 按适用规则形成接受、责任、承诺或授权关系。主体可拒绝、协商或保留。连接 I-C3、A-P3/A-P4/A-P8/A-P10。这里的 uptake 不强制所有社会行为都需同样形式的明示双向接受。
+M3 已有请求／安排理解 → M4 按适用规则形成接受、责任、承诺或授权关系。主体可拒绝、协商或保留。连接 I-C3、A-P3/A-P4/A-P8/A-P10。这里的社会采纳（uptake）指表达取得有关规则所需的接收、理解或响应依据，不强制所有社会行为都需同样形式的明示双向接受。
 
 <a id="b-c5"></a>
 ## B-C5. Evaluation-to-Acceptance Specification

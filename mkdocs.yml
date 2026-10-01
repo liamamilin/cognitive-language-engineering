@@ -96,6 +96,7 @@ nav:
 - 项目维护:
   - 当前状态: project/STATUS.md
   - 整合审查: project/REVIEW_REPORT.md
+  - 概念审查: project/CONCEPT_AUDIT.md
   - 基线追溯: project/BASELINE.md
   - 维护约定: project/MAINTENANCE.md
   - 变更记录: project/CHANGELOG.md
