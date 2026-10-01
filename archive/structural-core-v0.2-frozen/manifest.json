@@ -1,0 +1,25 @@
+{
+  "version": "structural-core-v0.2",
+  "status": "frozen",
+  "date": "2026-10-01",
+  "project": "project-v0.5.3",
+  "parent": "CLE v0.5 (preliminarily frozen)",
+  "scope": "core source and full selection audit; later revisions preserve this snapshot",
+  "selection": {
+    "principles": 6,
+    "model_domains": 4,
+    "primary_interfaces": 23,
+    "support_interfaces": 8,
+    "primary_mechanisms": 7,
+    "operators": 15,
+    "complete_protocols": [
+      "PR05"
+    ],
+    "bridges": 6,
+    "outcomes": 3
+  },
+  "files": {
+    "index.md": "28cad2ea60c8ad5b9b520a49ba7615c7cd5cf4f407236261c35369ff538ec878",
+    "SELECTION.md": "6350dfd469325f07ab5bffe4ee73f11c085a54d357e7766afe518190e19a267f"
+  }
+}

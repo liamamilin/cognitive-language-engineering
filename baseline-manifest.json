@@ -1,0 +1,42 @@
+{
+  "snapshot": "project-v0.1.0",
+  "date": "2026-10-01",
+  "files": [
+    {
+      "uploaded_name": "核心.md",
+      "project_path": "docs/PURPOSE.md",
+      "size_bytes": 520,
+      "sha256": "bb175f020a9c4ec919f5d8c8d881499bd311bc501b8a4812784e93c43bcad95f"
+    },
+    {
+      "uploaded_name": "认知语言工程V 0.3 核心体系.md",
+      "project_path": "docs/CORE_SPEC.md",
+      "size_bytes": 19972,
+      "sha256": "f574a90b6e7a5fc31c535989b80e2d15e08d50196ab19220cf0f0651f8708573"
+    },
+    {
+      "uploaded_name": "M1.md",
+      "project_path": "docs/models/M1.md",
+      "size_bytes": 6621,
+      "sha256": "18a6721d70bb05d8d134de9c28e162bed3b1eef5b1ce4261576624dbd3d2a2ea"
+    },
+    {
+      "uploaded_name": "M2.md",
+      "project_path": "docs/models/M2.md",
+      "size_bytes": 19952,
+      "sha256": "9b76b0ec5480cd7b086e7638622403503be2e53ac8102d97d9716b98ac3dd915"
+    },
+    {
+      "uploaded_name": "M3.md",
+      "project_path": "docs/models/M3.md",
+      "size_bytes": 13470,
+      "sha256": "bb71649af000f75db43bbe30db417888d97108c17fac6a3ebb4a908bb6881fe3"
+    },
+    {
+      "uploaded_name": "M4.md",
+      "project_path": "docs/models/M4.md",
+      "size_bytes": 19209,
+      "sha256": "492b0bafd1e4dc1a5ddbc6f6714c80fffe5905ae3adfa503056c7b2beb47660d"
+    }
+  ]
+}

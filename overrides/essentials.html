@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ page.meta.description | e }}">
+  <meta name="theme-color" content="#174b42">
+  <title>{{ page.title | e }} · 原体系的核心 · v0.2 冻结版</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23174b42'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-size='38' font-family='sans-serif' fill='white'%3EC%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="{{ 'assets/stylesheets/essentials.css' | url }}">
+</head>
+<body>
+  <a class="skip" href="#content">跳到正文</a>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark" aria-hidden="true">C</span><span>CLE <b>结构核心版</b></span></a>
+    <nav aria-label="页面导航"><a href="#principles">原则</a><a href="#models">四模型</a><a href="#mechanisms">机制</a><a class="back" href="{{ nav.homepage.url | url }}/#_2">完整体系 ↗</a></nav>
+  </header>
+  <div class="layout">
+    <aside class="rail" aria-label="手册目录">
+      <p class="eyebrow">CLE · STRUCTURAL CORE</p>
+      <p class="rail-title">骨架保留。<br>少而实用。</p>
+      <nav aria-label="核心版章节"><a href="#selection">01 · 筛选与范围</a><a href="#principles">02 · 六项原则</a><a href="#models">03 · 四类模型</a><div class="model-shortcuts"><a href="#m1">M1</a><a href="#m2">M2</a><a href="#m3">M3</a><a href="#m4">M4</a></div><a href="#mechanisms">04 · 机制家族</a><a href="#engineering">05 · 工程层</a><a href="#feedback">06 · 连接与评估</a><a href="#examples">07 · 使用例子</a><a href="#boundary">08 · 扩展边界</a></nav>
+      <p class="rail-note">沿用原ID与定义。<br>核心、依赖、扩展分别学习。</p>
+    </aside>
+    <main id="content" tabindex="-1"><article>{{ page.content }}</article></main>
+  </div>
+  <footer><span>CLE 结构核心版 v0.2 · 母体系 v0.5</span><a href="{{ nav.homepage.url | url }}/#_2">返回阅读路线 ↗</a></footer>
+</body>
+</html>
