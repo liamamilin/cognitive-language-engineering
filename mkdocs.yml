@@ -1,6 +1,6 @@
 site_url: https://liamamilin.github.io/cognitive-language-engineering/
 repo_url: https://github.com/liamamilin/cognitive-language-engineering
-site_name: 认知语言工程 v0.6 工作版
+site_name: 认知语言工程 v0.7
 site_description: 让语言更有效地服务于思考、表达、协作与行动
 docs_dir: docs
 site_dir: site
@@ -54,7 +54,7 @@ nav:
 - 1 Principle 原则:
   - 七项原则: learning/PRINCIPLES.md
   - 核心目的: PURPOSE.md
-  - 核心规范 v0.6: CORE_SPEC.md
+  - 核心规范 v0.7: CORE_SPEC.md
 - 2 Model 模型:
   - 四模型导读: learning/MODEL_GUIDE.md
 - 3 接口:
@@ -97,6 +97,7 @@ nav:
   - 当前状态: project/STATUS.md
   - 整合审查: project/REVIEW_REPORT.md
   - 概念审查: project/CONCEPT_AUDIT.md
+  - 隐藏知识审查: project/GROUNDING_AUDIT.md
   - 基线追溯: project/BASELINE.md
   - 维护约定: project/MAINTENANCE.md
   - 变更记录: project/CHANGELOG.md

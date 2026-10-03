@@ -33,6 +33,7 @@ def export(destination):
     core = (DOCS / 'CORE_SPEC.md').read_text()
     version = re.search(r'Core Spec (v[\d.]+)', core).group(1)
     date = re.search(r'日期：(\d{4}-\d{2}-\d{2})', core).group(1)
+    status = re.search(r'状态：\*\*([^*]+)\*\*', core).group(1)
     entries = list(nav_entries(yaml.safe_load((ROOT / 'mkdocs.yml').read_text())['nav']))
     credit_match = re.search(r'^\*\*作者：\*\* .+$', (DOCS / 'index.md').read_text(), re.MULTILINE)
     credit = credit_match.group(0) if credit_match else ''
@@ -76,7 +77,7 @@ def export(destination):
         md_sections.append(f'<a id="{prefix}"></a>\n\n' + '\n'.join(lines))
 
     md_toc = '\n'.join(f'{i}. [{label}](#{prefixes[p]})' for i, (label, p) in enumerate(entries, 1))
-    manuscript = f'# 认知语言工程｜完整体系 {version}\n\n{credit}\n\n{date} · 完整体系工作版，尚未冻结\n\n本稿由项目正文生成，包含理论架构、工程组件、使用案例、评估、来源和维护说明。修改以项目 docs 为准。\n\n## 目录\n\n' + md_toc + '\n\n---\n\n' + '\n\n---\n\n'.join(md_sections) + '\n'
+    manuscript = f'# 认知语言工程｜完整体系 {version}\n\n{credit}\n\n{date} · {status}\n\n本稿由项目正文生成，包含理论架构、工程组件、使用案例、评估、来源和维护说明。修改以项目 docs 为准。\n\n## 目录\n\n' + md_toc + '\n\n---\n\n' + '\n\n---\n\n'.join(md_sections) + '\n'
     md_path = destination / f'CLE_{version}_完整体系.md'
     md_path.write_text(manuscript)
     toc = ''.join(f'<li><a href="#{prefixes[p]}"><span>{i:02}</span>{escape(label)}</a></li>' for i, (label, p) in enumerate(entries, 1))
@@ -85,7 +86,7 @@ def export(destination):
     template = template.replace('READER_JS', (DOCS / 'assets/javascripts/reader.js').read_text())
     html_path = destination / f'CLE_{version}_完整体系.html'
     template = template.replace('AUTHOR_CREDIT', credit_html)
-    html_path.write_text(template.replace('VERSION', version).replace('DATE', date).replace('CHAPTER_COUNT', str(len(entries))).replace('TOC', toc).replace('CONTENT', '\n'.join(html_sections)))
+    html_path.write_text(template.replace('VERSION', version).replace('DATE', date).replace('RELEASE_STATUS', escape(status)).replace('CHAPTER_COUNT', str(len(entries))).replace('TOC', toc).replace('CONTENT', '\n'.join(html_sections)))
     return md_path, html_path
 
 if __name__ == '__main__':

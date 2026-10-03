@@ -1,26 +1,38 @@
 # 发布在线电子书
 
-完整v0.6仍为工作版，尚未冻结；完整v0.5及结构核心v0.2冻结归档保留。
+本次交付为完整体系v0.7。完整v0.5、结构核心v0.2冻结归档及v0.6末次工作稿快照保留。网站与完整阅读稿都由docs生成。
 
-## 当前发布方式
+## 将v0.7上传到原仓库
 
-仓库：[liamamilin/cognitive-language-engineering](https://github.com/liamamilin/cognitive-language-engineering)。2026-10-01已确认GitHub连接可用，账号对仓库有写入权限；远程main已有project-v0.5.3源码。本次按用户要求恢复同步，已准备完整v0.6工作版。本地检查通过，用户已明确同意将这批内容同步到该公开仓库的main分支，并触发电子书部署。插件上传返回403（Resource not accessible by integration），云浏览器凭证状态也无法恢复；尚未完成本轮远程提交。已准备只含更新文件的网页上传包；部署结果仍须由Actions及实际页面核验。
+仓库：[liamamilin/cognitive-language-engineering](https://github.com/liamamilin/cognitive-language-engineering)。
 
-Markdown → MkDocs Material → 静态阅读页面 → GitHub Pages。main推送触发`.github/workflows/book.yml`；PR只构建检查，手动运行也可触发部署。源码提交、构建成功与部署成功分别确认，在线地址以部署任务输出为准。
+1. 解压 `CLE_v0.7_GitHub上传包.zip`，打开其中的 `upload` 文件夹。
+2. 在原仓库的main分支选择 **Add file → Upload files**，将 `upload` 内的文件和文件夹上传到仓库根目录，覆盖同路径文件。不要上传ZIP本身，也不要把外层 `upload` 作为目录上传。
+3. 确认上传后的根目录仍直接包含 `docs`、`scripts`、`overrides`、`mkdocs.yml`、`README.md` 和 `.github/workflows/book.yml`。提交说明可写 `Release CLE v0.7`。
+4. 提交后打开 **Actions**，等待 `Build and publish CLE book` 的构建与部署成功。
+5. 打开[在线阅读入口](https://liamamilin.github.io/cognitive-language-engineering/)，刷新页面并确认首页显示 **完整体系 v0.7** 和作者署名，再查看模型、术语与阅读路线。
 
-结构核心子体系使用独立阅读模板，输出至`essentials/index.html`；母体系首页“阅读路线”保留入口，子体系保留返回和追溯链接。所有跳转使用相对路径。
+上传包合并此前尚未同步的正文与阅读体验修改，以及本次v0.7更新；适用于原仓库。包内另附完整项目ZIP，供保存完整源码或恢复项目，不需要把它作为压缩文件上传到仓库。
 
-## 后续更新
+提交、构建和部署分别确认。本次交付没有执行远程提交，也没有声称v0.7已经上线。上传的文件若缺失或同路径未覆盖，先对照上传清单补齐。
 
-正文以docs为准。修改后同步索引、版本记录与派生检查材料，运行README中的文档检查和严格构建，再提交到main。保留冻结快照与稳定编号；v0.6是否冻结另由用户决定。
+## 构建与后续维护
 
-仓库Settings → Pages → Build and deployment → Source应选择GitHub Actions。部署失败先查看Actions对应任务的日志，再按失败原因修正或重跑。实际站点URL须从成功部署输出核验，不按地址模式宣称已上线。
+Markdown → MkDocs Material → 静态阅读页面 → GitHub Pages。main提交触发 `.github/workflows/book.yml`；PR只做构建检查，手动运行也可触发部署。
 
-当前网站发布最新阅读版，未配置网页版本选择器；旧版本正文保存在archive。单文件Markdown和HTML阅读副本可通过`python scripts/export_book.py --output-dir reading`重新生成，不手工维护。EPUB/PDF可在正文更稳定时再增加。
+正文修改后同步索引、版本说明与派生检查材料，执行README中的检查和严格构建。工作流检查登记表、学习连接、正文链接、结构核心与生成页面；检查失败时不会继续部署。
 
-## 历史发布记录
+仓库Settings → Pages → Build and deployment → Source使用GitHub Actions。部署失败时查看对应任务日志，按实际原因修正或重跑；上线以成功部署和实际页面为准。
 
-此前曾使用云浏览器创建仓库，上传受浏览器运行环境阻塞；随后采用source-import.zip和首次导入工作流，现已核实远程仓库具有v0.5.3源码。本轮不再需要首次导入包。旧导入包和工作流记录保留在Git历史及原仓库，避免改动无关文件。
+结构核心使用独立阅读模板，同一次构建输出至 `essentials/index.html`。完整体系首页“阅读路线”保留入口，核心版保留返回和追溯链接。
+
+单文件Markdown与HTML阅读稿通过 `python scripts/export_book.py --output-dir reading` 重新生成，不单独改正文。网站展示成功部署的提交；旧版本由归档和Git历史追溯。
+
+## 历史记录
+
+已知2026-10-01用户上传v0.6后，[该次提交](https://github.com/liamamilin/cognitive-language-engineering/commit/e604dcefd3f463b807d98c7e53a1134cf5e9f801)的部署成功。该记录只说明当时内容上线；此后的本地修改和v0.7须以新的提交与部署确认。
+
+首次导入所用的source-import.zip和兼容工作流属于历史安排；原仓库已有正文，本次按现有路径更新。
 
 ## 官方参考
 

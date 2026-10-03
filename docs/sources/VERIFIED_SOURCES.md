@@ -130,7 +130,7 @@ Gollwitzer & Sheeran (2006), Implementation intentions and goal achievement: A m
 
 ## 对整个 CLE 的支持程度
 
-这些文献支持局部概念、方法和效果主张。没有一篇来源直接验证本版四模型分类、34 算子组合、13 协议或整套训练的效果。对整体效果、迁移和成本的验证遵从[评估规范](../evaluation/EVALUATION.md)。
+这些文献支持局部概念、方法和效果主张。没有一篇来源直接验证本版四模型分类、37 算子及其组合、13 协议或整套训练的效果。对整体效果、迁移和成本的验证遵从[评估规范](../evaluation/EVALUATION.md)。
 
 ## 本轮概念释义核对
 

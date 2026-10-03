@@ -2,7 +2,7 @@
 
 **作者：** lin.mi · **邮箱：** [lin.mi.official@gmail.com](mailto:lin.mi.official@gmail.com)
 
-**Cognitive Language Engineering · 完整体系 v0.6 工作版 · 2026-10-01 · 尚未冻结**
+**Cognitive Language Engineering · 完整体系 v0.7 发布稿 · 2026-10-03**
 
 提升人对语言的主动控制能力，让语言更有效地服务于认知、表达、互动与行动。
 
@@ -10,22 +10,26 @@
 
 **Principle → Model → 接口 → 算子 → 语言模式**
 
-先读[学习主线](learning/MAINLINE.md)，再依次读[七项原则](learning/PRINCIPLES.md)、[四模型导读](learning/MODEL_GUIDE.md)。在各模型中，把接口、方法和例句连起来掌握；[完整连接索引](learning/INTERFACE_PATHS.md)供查找。
+先读[学习主线](learning/MAINLINE.md)，再读[七项原则](learning/PRINCIPLES.md)和[四模型导读](learning/MODEL_GUIDE.md)。进入各模型后，将接口的变化方向、算子的具体方法和语言模式的表达连起来理解；[完整连接索引](learning/INTERFACE_PATHS.md)供回查。
 
-[结构核心版 v0.2](essentials/index.md)是基于已冻结v0.5的原结构核心版本。它保留原文与筛选，不自动代表完整v0.6的新选择；其后续版本另行打磨。
+[结构核心版 v0.2](essentials/index.md)保留基于已冻结v0.5的原结构与筛选。它是较小的阅读入口；完整体系的后续修订以本版为准，核心版的更新另行记录。
 
-掌握之后，按[应用指南](START_HERE.md)从实际任务进入。需要解释原理时读[机制](MECHANISMS.md)；需要组织多个操作时读[协议](engineering/PROTOCOLS.md)；练习与检查见[能力训练](learning/TRAINING.md)。
+掌握之后，按[应用指南](START_HERE.md)从实际任务进入。想理解变化可能怎样产生时读[机制](MECHANISMS.md)；需要组织多个操作时读[协议](engineering/PROTOCOLS.md)；练习与检查见[能力训练](learning/TRAINING.md)。
 
-遇到术语不清楚时，按需查[术语表](GLOSSARY.md)；本轮补齐概念定义并在主线和模型就近解释，[审查记录](project/CONCEPT_AUDIT.md)供查看修改依据。
+遇到不清楚的词，按需查[术语表](GLOSSARY.md)。关键概念也在有关正文就近解释，无需先背一遍术语表。
 
-## 本版怎样打磨
+## 本版包含什么
 
-| 范围 | 本版内容 |
+| 范围 | 内容 |
 | --- | --- |
-| 学习骨架 | 七原则，四模型，接口→算子→语言模式的逐项连接 |
-| 完整模型 | M1 8、M2 35、M3 9、M4 29，共81个原接口，含4个特化 |
-| 方法与表达 | 34个原算子保留并补条件变体，新增3个；36个原模式保留，新增3个 |
-| 支撑内容 | 12机制、8Bridge、3Outcome、13协议及证据、评估、训练、来源 |
-| 审查 | 全接口学习连接、构造例子及边界检查；效果与实际频率尚未验证 |
+| 学习骨架 | 七原则、四模型及接口→算子→语言模式的逐项连接 |
+| 模型接口 | M1 8、M2 35、M3 9、M4 29，共81个接口，含4个特化 |
+| 方法与表达 | 37个算子、39个语言模式，附前提、做法、语境与检查 |
+| 支撑内容 | 12机制、8个跨模型连接、3类结果、13协议，以及证据、评估、训练与来源 |
+| 阅读整理 | 固定分组名称、组间讲解、集中定义和连续例子；通用说明集中，局部条件保留 |
 
-完整性指内容与方法可追溯，不要求每次使用全部组件，也不把81个接口当81个独立心理机制。旧冻结版本保留；本版等待阅读反馈继续修订。[在线阅读](https://liamamilin.github.io/cognitive-language-engineering/)已发布完整v0.6工作版，后续修改按提交和部署结果同步。
+完整性指内容和方法能够追溯，不要求每次使用全部组件，也不把81个接口当作81个独立心理机制。实际频率、方法效果和整套教学效果仍需使用材料与研究检验。
+
+v0.7整合此前的[概念审查](project/CONCEPT_AUDIT.md)、[隐藏知识审查](project/GROUNDING_AUDIT.md)和查漏补缺，并完成最终阅读润色。修改范围见[整合审查](project/REVIEW_REPORT.md)，历史见[变更记录](project/CHANGELOG.md)。
+
+[在线阅读入口](https://liamamilin.github.io/cognitive-language-engineering/)沿用原地址；是否已显示v0.7，以本次上传后的部署结果和首页版本为准。[上传说明](project/PUBLISHING.md)提供同步步骤。
