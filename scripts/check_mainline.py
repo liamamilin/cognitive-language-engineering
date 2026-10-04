@@ -47,7 +47,9 @@ for model in ['M1','M2','M3','M4']:
   for op in used:
    if op not in ops:errors.append(f'{ident}: undefined operator {op}')
    elif '['+patterns[op]+']' not in language:errors.append(f'{ident}: missing pattern for {op}')
-  if '语境示例：' not in language:errors.append(f'{ident}: missing situated example')
+  example=re.search(r'\*\*语言模式示例：\*\* “([^\n]+)”',body)
+  if not example:errors.append(f'{ident}: missing language pattern example')
+  elif not re.search(r'〔[^〕]+〕',example[1]):errors.append(f'{ident}: missing pattern slots')
 
 index=(D/'learning/INTERFACE_PATHS.md').read_text()
 rows=re.findall(r'^\| \[([RCIA]-[PC]\d+)\]',index,re.M)
@@ -68,5 +70,5 @@ frozen=ROOT/'archive/structural-core-v0.2-frozen'
 for name in ['index.md','SELECTION.md']:
  if (D/'essentials'/name).read_bytes()!=(frozen/name).read_bytes():errors.append(f'frozen core changed: {name}')
 
-print(json.dumps({'interfaces':len(cards),'operators':len(ops),'principal_patterns':len(patterns),'all_interfaces_have_methods_examples_checks':not errors,'baseline_definitions_and_archives_preserved':not errors,'errors':errors},ensure_ascii=False,indent=2))
+print(json.dumps({'interfaces':len(cards),'operators':len(ops),'principal_patterns':len(patterns),'all_interfaces_have_methods_pattern_examples_checks':not errors,'baseline_definitions_and_archives_preserved':not errors,'errors':errors},ensure_ascii=False,indent=2))
 sys.exit(bool(errors))

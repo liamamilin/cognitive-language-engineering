@@ -2,7 +2,7 @@
 
 **作者：** lin.mi · **邮箱：** [lin.mi.official@gmail.com](mailto:lin.mi.official@gmail.com)
 
-**Cognitive Language Engineering · 完整体系 v0.7 发布稿 · 2026-10-03**
+**Cognitive Language Engineering · 完整体系 v0.7 发布稿 · 2026-10-04**
 
 提升人对语言的主动控制能力，让语言更有效地服务于认知、表达、互动与行动。
 
@@ -30,6 +30,8 @@
 
 完整性指内容和方法能够追溯，不要求每次使用全部组件，也不把81个接口当作81个独立心理机制。实际频率、方法效果和整套教学效果仍需使用材料与研究检验。
 
-v0.7整合此前的[概念审查](project/CONCEPT_AUDIT.md)、[隐藏知识审查](project/GROUNDING_AUDIT.md)和查漏补缺，并完成最终阅读润色。修改范围见[整合审查](project/REVIEW_REPORT.md)，历史见[变更记录](project/CHANGELOG.md)。
+本次补齐七项原则的含义、例子、作用与边界；原则页先讲解，再提供回查表。v0.7整合此前的[概念审查](project/CONCEPT_AUDIT.md)、[隐藏知识审查](project/GROUNDING_AUDIT.md)和查漏补缺，并完成最终阅读润色。修改范围见[整合审查](project/REVIEW_REPORT.md)，历史见[变更记录](project/CHANGELOG.md)。
 
 [在线阅读入口](https://liamamilin.github.io/cognitive-language-engineering/)沿用原地址；是否已显示v0.7，以本次上传后的部署结果和首页版本为准。[上传说明](project/PUBLISHING.md)提供同步步骤。
+
+本次阅读修订：四模型接口先给语言模式链接，再给可复用的语言模式示例；〔……〕表示待填位置。具体情境例句用于说明怎样填入内容，不与模式形式混称。
