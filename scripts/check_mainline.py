@@ -47,9 +47,20 @@ for model in ['M1','M2','M3','M4']:
   for op in used:
    if op not in ops:errors.append(f'{ident}: undefined operator {op}')
    elif '['+patterns[op]+']' not in language:errors.append(f'{ident}: missing pattern for {op}')
-  example=re.search(r'\*\*语言模式示例：\*\* “([^\n]+)”',body)
-  if not example:errors.append(f'{ident}: missing language pattern example')
-  elif not re.search(r'〔[^〕]+〕',example[1]):errors.append(f'{ident}: missing pattern slots')
+  core=re.search(r'\*\*核心句：\*\* “([^\n]+)”',body)
+  expansion=re.search(r'\*\*展开：\*\* “([^\n]+)”',body)
+  if not core:errors.append(f'{ident}: missing core sentence')
+  if not expansion:errors.append(f'{ident}: missing pattern expansion')
+  elif not re.search(r'〔[^〕]+〕',expansion[1]):errors.append(f'{ident}: missing expansion slots')
+
+pattern_page=(D/'engineering/PATTERNS.md').read_text()
+for op,body in ops.items():
+ for field in ['核心句','展开']:
+  if '**'+field+'：**' not in body:errors.append(f'{op}: missing pattern {field}')
+for ident in ['LP35','LP36']:
+ body=re.search(r'^## '+ident+r'\. (.*?)(?=^## |\Z)',pattern_page,re.M|re.S)[1]
+ for field in ['核心句','展开']:
+  if '**'+field+'：**' not in body:errors.append(f'{ident}: missing {field}')
 
 index=(D/'learning/INTERFACE_PATHS.md').read_text()
 rows=re.findall(r'^\| \[([RCIA]-[PC]\d+)\]',index,re.M)
@@ -70,5 +81,5 @@ frozen=ROOT/'archive/structural-core-v0.2-frozen'
 for name in ['index.md','SELECTION.md']:
  if (D/'essentials'/name).read_bytes()!=(frozen/name).read_bytes():errors.append(f'frozen core changed: {name}')
 
-print(json.dumps({'interfaces':len(cards),'operators':len(ops),'principal_patterns':len(patterns),'all_interfaces_have_methods_pattern_examples_checks':not errors,'baseline_definitions_and_archives_preserved':not errors,'errors':errors},ensure_ascii=False,indent=2))
+print(json.dumps({'interfaces':len(cards),'operators':len(ops),'principal_patterns':len(patterns),'all_interfaces_have_methods_core_expansion_checks':not errors,'baseline_definitions_and_archives_preserved':not errors,'errors':errors},ensure_ascii=False,indent=2))
 sys.exit(bool(errors))
