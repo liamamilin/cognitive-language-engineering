@@ -2,7 +2,7 @@
 
 **作者：** lin.mi · **邮箱：** [lin.mi.official@gmail.com](mailto:lin.mi.official@gmail.com)
 
-**Cognitive Language Engineering · 完整体系 v0.7 发布稿 · 2026-10-04**
+**Cognitive Language Engineering · 完整体系 v0.7 发布稿 · 2026-10-09**
 
 提升人对语言的主动控制能力，让语言更有效地服务于认知、表达、互动与行动。
 
@@ -34,4 +34,4 @@
 
 [在线阅读入口](https://liamamilin.github.io/cognitive-language-engineering/)沿用原地址；是否已显示v0.7，以本次上传后的部署结果和首页版本为准。[上传说明](project/PUBLISHING.md)提供同步步骤。
 
-本次阅读修订：语言模式先给一条可直接背诵的核心句，再给展开，说明怎样处理材料、形成输出并检查接口变化。四模型卡片和模式正文同步；〔……〕是待填位置。
+本次阅读修订：逐项打磨81接口及39语言模式。核心句提示方向，展开提供可以直接填入内容的表达；完成检查另说明怎样判断结果，必要处补具体检查。首页日期为2026-10-09，规范仍为v0.7。四模型、算子、模式、案例与训练同步；〔……〕是待填位置。
