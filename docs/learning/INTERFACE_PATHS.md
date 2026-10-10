@@ -10,7 +10,7 @@
 
 ## M1
 
-[对象](../models/M1.md#object) · [特征](../models/M1.md#feature) · [概念](../models/M1.md#concept) · [表达](../models/M1.md#expression)
+[所指](../models/M1.md#referent) · [特征](../models/M1.md#feature) · [概念](../models/M1.md#concept) · [表达](../models/M1.md#expression)
 
 | 接口 | 变化方向 | 操作入口 | 主模式 | 处理提示 |
 | --- | --- | --- | --- | --- |
