@@ -1,5 +1,20 @@
 [
   {
+    "id": "R-C2",
+    "model": "M1",
+    "name": "Identification",
+    "kind": "Composite",
+    "specializes": null,
+    "components": [
+      "R-P5"
+    ],
+    "cross_domain": [
+      "C-C1",
+      "C-P13"
+    ],
+    "mechanisms": []
+  },
+  {
     "id": "R-P1",
     "model": "M1",
     "name": "Feature Selection",

@@ -1,6 +1,6 @@
 # 接口 → 算子 → 语言模式：完整学习连接
 
-本索引覆盖完整四模型的81个接口。从原则和模型进入后，用这里把变化方向接到方法及表达。每行列的是推荐操作入口，不穷举所有可能方法，不表示每个算子会自动实现全部接口结果。方法、核心句、展开和检查在接口卡片里展开。
+本索引覆盖完整四模型的82个接口。从原则和模型进入后，用这里把变化方向接到方法及表达。每行列的是推荐操作入口，不穷举所有可能方法，不表示每个算子会自动实现全部接口结果。方法、核心句、展开和检查在接口卡片里展开。
 
 复合接口按现有组成选择必要操作，协议仅在需要完整任务控制时使用。特化接口复用父接口的方法。完成、履行和稳定性需要现实材料；有语言模式仍不能以表达替代执行。
 
@@ -10,10 +10,11 @@
 
 ## M1
 
-[特征](../models/M1.md#feature) · [概念](../models/M1.md#concept) · [表达](../models/M1.md#expression)
+[对象](../models/M1.md#object) · [特征](../models/M1.md#feature) · [概念](../models/M1.md#concept) · [表达](../models/M1.md#expression)
 
 | 接口 | 变化方向 | 操作入口 | 主模式 | 处理提示 |
 | --- | --- | --- | --- | --- |
+| [R-C2](../models/M1.md#r-c2) 指认（Identification） | 讨论所指尚未明确 → 有明确所指、可以回查的对象表征 | [OP09](../engineering/OPERATORS.md#op09)、[OP10](../engineering/OPERATORS.md#op10)、[OP36](../engineering/OPERATORS.md#op36) | [LP09](../engineering/PATTERNS.md#lp09)、[LP10](../engineering/PATTERNS.md#lp10)、[LP38](../engineering/PATTERNS.md#lp38) | 按所指、范围或称呼缺口选择；名称未知可用描述 |
 | [R-P1](../models/M1.md#r-p1) 特征选择（Feature Selection） | 未组织的任务相关经验 → 已选择特征 | [OP35](../engineering/OPERATORS.md#op35) | [LP37](../engineering/PATTERNS.md#lp37) | 条件变体，按本接口检查 |
 | [R-P2](../models/M1.md#r-p2) 特征区分（Differentiation） | 混合特征 → 可区分特征 | [OP06](../engineering/OPERATORS.md#op06) | [LP06](../engineering/PATTERNS.md#lp06) | 条件变体，按本接口检查 |
 | [R-P3](../models/M1.md#r-p3) 分类（Categorization） | 实例集合 → 类别表征 | [OP34](../engineering/OPERATORS.md#op34) | [LP34](../engineering/PATTERNS.md#lp34) | 条件变体，按本接口检查 |

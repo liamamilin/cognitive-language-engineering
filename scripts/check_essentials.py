@@ -7,11 +7,22 @@ from pathlib import Path
 import json
 import re
 import sys
+from update_registry import parse_model_cards, field
 
 ROOT = Path(__file__).resolve().parents[1]
 audit = (ROOT / 'docs/essentials/SELECTION.md').read_text()
 core = (ROOT / 'docs/essentials/index.md').read_text()
-registry = {r['id']: r for r in json.loads((ROOT / 'scripts/registry_snapshot.json').read_text())}
+# This selection belongs to frozen v0.5, not later additions to the full book.
+registry = {}
+for model in ['M1', 'M2', 'M3', 'M4']:
+    source = (ROOT / f'archive/full-v0.5-frozen/docs/models/{model}.md').read_text()
+    for card in parse_model_cards(source):
+        body = card['body']
+        specialization = field(body, '类型')
+        registry[card['id']] = {
+            'model': model, 'components': field(body, '可复用组成'),
+            'specializes': specialization[0] if specialization else None,
+        }
 errors = []
 
 def present(ident):

@@ -111,3 +111,4 @@ nav:
   - 006 决策006｜核心版必须保留母体系结构: decisions/006-structural-core.md
   - 007 007｜冻结结构核心版 v0.2: decisions/007-freeze-structural-core.md
   - 008 学习主线与完整连接: decisions/008-learning-mainline.md
+  - 009 补入指认入口: decisions/009-identification-entry.md

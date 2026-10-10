@@ -34,11 +34,11 @@
 
 **入口与目标：** 混合材料／标签／概念 → 任务所需的清晰表征与表达。
 
-**使用组件：** [OP35](OPERATORS.md#op35)、[OP09](OPERATORS.md#op09)、[OP33](OPERATORS.md#op33)、[OP34](OPERATORS.md#op34)、[OP36](OPERATORS.md#op36)、[OP23](OPERATORS.md#op23)。
+**使用组件：** [OP35](OPERATORS.md#op35)、[OP09](OPERATORS.md#op09)、[OP10](OPERATORS.md#op10)（指认范围仍有歧义时）、[OP33](OPERATORS.md#op33)、[OP34](OPERATORS.md#op34)、[OP36](OPERATORS.md#op36)、[OP23](OPERATORS.md#op23)。
 
 **步骤：**
 
-1. 确定这次表达给谁、用于什么判断。
+1. 确定这次表达给谁、用于什么判断。对象未明时先用[指认](../models/M1.md#r-c2)定位所指，用名称或描述说明；范围仍有歧义时再用OP10限定。已有明确对象直接复用。
 2. 区分事实材料、体验、解释与未知；展开压缩标签。
 3. 按用途选择相关描述方面；需要概念时说明归类依据、含义与边界，需要关系时说明要素怎样联系。不为普通描述强制形成新概念。
 4. 按用途编码或压缩；回到原材料检查信息损失。

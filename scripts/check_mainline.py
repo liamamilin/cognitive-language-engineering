@@ -11,13 +11,22 @@ ops_text=(D/'engineering/OPERATORS.md').read_text()
 ops={op:body for op,body in re.findall(r'^## (OP\d+)\. (.*?)(?=^## OP|\Z)',ops_text,re.M|re.S)}
 patterns={op:re.search(r'\*\*语言模式 (LP\d+)',body)[1] for op,body in ops.items()}
 assert len(set(patterns.values()))==len(patterns), 'duplicate principal language pattern'
+additions=json.loads((ROOT/'scripts/interface-additions.json').read_text())
+allowed={r['id']:r for r in additions['additions']}
 cards={}
 registry=json.loads((ROOT/'scripts/registry_snapshot.json').read_text())
 records={r['id']:r for r in registry}
+for ident,addition in allowed.items():
+ if ident not in records or records[ident]['model']!=addition['model'] or records[ident]['kind']!=addition['kind']:
+  errors.append(f'{ident}: addition registry differs from reviewed model or kind')
+ if not (ROOT/addition['decision']).is_file():errors.append(f'{ident}: missing addition decision')
 targets={op:set(re.findall(r'\[([RCIABO]-[PC]\d+)\]',re.search(r'\*\*目标变化：\*\* (.+)',body)[1])) for op,body in ops.items()}
 def component_closure(ident):
     out={ident}
-    rec=records[ident]
+    rec=records.get(ident)
+    if rec is None:
+        errors.append(f'{ident}: missing registry record')
+        return out
     for child in rec['components']+([rec['specializes']] if rec['specializes'] else []):
         if child in records:
             out|=component_closure(child)
@@ -28,7 +37,9 @@ for model in ['M1','M2','M3','M4']:
  def parse(source):
   return {card['id']:card['body'] for card in parse_model_cards(source)}
  current,old=parse(text),parse(baseline)
- if set(current)!=set(old):errors.append(f'{model}: original interface set changed')
+ expected={ident for ident,rec in allowed.items() if rec['model']==model}
+ if set(old)-set(current):errors.append(f'{model}: original interface removed')
+ if set(current)-set(old)!=expected:errors.append(f'{model}: interface additions differ from reviewed record')
  for ident,body in current.items():
   cards[ident]=body
   for field in ['操作入口','怎样做','语言模式','状态变化','完成检查']:
@@ -37,7 +48,8 @@ for model in ['M1','M2','M3','M4']:
    def value(content):
     m=re.search(r'\*\*'+re.escape(field)+r'：\*\* ([^\n]+)',content)
     return m[1] if m else None
-   if value(body)!=value(old[ident]):errors.append(f'{ident}: baseline definition changed: {field}')
+   if ident in old and value(body)!=value(old[ident]):errors.append(f'{ident}: baseline definition changed: {field}')
+   if ident in allowed and value(body)!=allowed[ident]['definition_fields'].get(field):errors.append(f'{ident}: reviewed addition definition changed: {field}')
   route=re.search(r'\*\*操作入口：\*\* ([^\n]+)',body)[1]
   used=re.findall(r'\[(OP\d+)\]',route)
   if not used:errors.append(f'{ident}: no operator entry')
@@ -81,5 +93,5 @@ frozen=ROOT/'archive/structural-core-v0.2-frozen'
 for name in ['index.md','SELECTION.md']:
  if (D/'essentials'/name).read_bytes()!=(frozen/name).read_bytes():errors.append(f'frozen core changed: {name}')
 
-print(json.dumps({'interfaces':len(cards),'operators':len(ops),'principal_patterns':len(patterns),'all_interfaces_have_methods_core_expansion_checks':not errors,'baseline_definitions_and_archives_preserved':not errors,'errors':errors},ensure_ascii=False,indent=2))
+print(json.dumps({'interfaces':len(cards),'reviewed_additions':sorted(allowed),'operators':len(ops),'principal_patterns':len(patterns),'all_interfaces_have_methods_core_expansion_checks':not errors,'baseline_definitions_and_archives_preserved':not errors,'errors':errors},ensure_ascii=False,indent=2))
 sys.exit(bool(errors))
